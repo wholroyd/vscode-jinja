@@ -1,0 +1,57 @@
+{
+	"name": "jinja",
+	"version": "0.0.1",
+	"publisher": "wholroyd",
+	"author": {
+		"name": "William Holroyd"
+	},
+	"license": "MIT",
+	"description": "Jinja template language support for Visual Studio Code",
+	"displayName": "Jinja",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/wholroyd/vscode-jinja.git"
+	},
+	"categories": [
+		"Languages",
+		"Snippets",
+		"Linters"
+	],
+	"engines": {
+		"vscode": "0.10.x"
+	},
+	"contributes": {
+		"languages": [
+			{
+				"id": "jinja",
+				"aliases": [
+					"Jinja",
+					"jinja"
+				],
+                "extensions": [".j2"],
+				"configuration": "./jinja.configuration.json"
+			},
+			{
+				"id": "jinja-html",
+				"aliases": [
+					"Jinja-HTML",
+					"jinja-html"
+				],
+                "extensions": [".j2", ".html"],
+				"configuration": "./jinja-html.configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "jinja",
+				"scopeName": "source.jinja",
+				"path": "./syntaxes/jinja.json"
+			},
+			{
+				"language": "jinja-html",
+				"scopeName": "text.html.jinja",
+				"path": "./syntaxes/jinja-html.json"
+			}
+		]
+	}
+}
