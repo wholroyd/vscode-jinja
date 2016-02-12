@@ -39,6 +39,15 @@
 				],
                 "extensions": [".j2", ".html"],
 				"configuration": "./jinja-html.configuration.json"
+			},
+			{
+				"id": "jinja-yaml",
+				"aliases": [
+					"Jinja-YAML",
+					"jinja-yaml"
+				],
+                "extensions": [".j2", ".yml", ".yaml"],
+				"configuration": "./jinja-yaml.configuration.json"
 			}
 		],
 		"grammars": [
@@ -51,6 +60,11 @@
 				"language": "jinja-html",
 				"scopeName": "text.html.jinja",
 				"path": "./syntaxes/jinja-html.json"
+			},
+			{
+				"language": "jinja-yaml",
+				"scopeName": "text.yaml.jinja",
+				"path": "./syntaxes/jinja-yaml.json"
 			}
 		]
 	}
