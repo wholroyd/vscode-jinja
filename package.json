@@ -37,7 +37,7 @@
 					"Jinja-HTML",
 					"jinja-html"
 				],
-                "extensions": [".j2", ".html"],
+                "extensions": [".j2", ".html", ".htm"],
 				"configuration": "./jinja-html.configuration.json"
 			},
 			{
@@ -46,7 +46,7 @@
 					"Jinja-YAML",
 					"jinja-yaml"
 				],
-                "extensions": [".j2", ".yml", ".yaml"],
+                "extensions": [".j2", ".eyaml", ".eyml", ".yaml", ".yml"],
 				"configuration": "./jinja-yaml.configuration.json"
 			}
 		],
