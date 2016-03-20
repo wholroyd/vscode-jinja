@@ -1,6 +1,6 @@
 {
 	"name": "jinja",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"publisher": "wholroyd",
 	"author": {
 		"name": "William Holroyd"
@@ -25,26 +25,25 @@
 			{
 				"id": "jinja",
 				"aliases": [
-					"Jinja",
-					"jinja"
+					"Jinja"
 				],
                 "extensions": [".j2"],
 				"configuration": "./jinja.configuration.json"
 			},
 			{
-				"id": "jinja-html",
+				"id": "html",
 				"aliases": [
-					"Jinja-HTML",
-					"jinja-html"
+					"Jinja",
+					"HTML"
 				],
                 "extensions": [".j2", ".html", ".htm"],
 				"configuration": "./jinja-html.configuration.json"
 			},
 			{
-				"id": "jinja-yaml",
+				"id": "yaml",
 				"aliases": [
-					"Jinja-YAML",
-					"jinja-yaml"
+					"Jinja",
+					"YAML"
 				],
                 "extensions": [".j2", ".eyaml", ".eyml", ".yaml", ".yml"],
 				"configuration": "./jinja-yaml.configuration.json"
@@ -57,12 +56,12 @@
 				"path": "./syntaxes/jinja.json"
 			},
 			{
-				"language": "jinja-html",
+				"language": "html",
 				"scopeName": "text.html.jinja",
 				"path": "./syntaxes/jinja-html.json"
 			},
 			{
-				"language": "jinja-yaml",
+				"language": "yaml",
 				"scopeName": "text.yaml.jinja",
 				"path": "./syntaxes/jinja-yaml.json"
 			}
