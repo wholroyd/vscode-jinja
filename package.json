@@ -1,6 +1,6 @@
 {
 	"name": "jinja",
-	"version": "0.0.6",
+	"version": "0.0.7",
 	"publisher": "wholroyd",
 	"author": {
 		"name": "William Holroyd"
@@ -49,7 +49,7 @@
 					"Jinja",
 					"YAML"
 				],
-                "extensions": [".j2", ".eyaml", ".eyml", ".yaml", ".yml"],
+                "extensions": [".j2", ".eyaml", ".eyml", ".yaml", ".yml", ".sls"],
 				"configuration": "./jinja-yaml.configuration.json"
 			}
 		],
