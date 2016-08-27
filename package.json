@@ -40,7 +40,7 @@
 					"Jinja",
 					"HTML"
 				],
-                "extensions": [".j2", ".html", ".htm"],
+                "extensions": [".j2", ".jinja2", ".html", ".htm"],
 				"configuration": "./jinja-html.configuration.json"
 			},
 			{
