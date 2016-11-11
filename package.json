@@ -68,7 +68,14 @@
 				"language": "yaml",
 				"scopeName": "text.yaml.jinja",
 				"path": "./syntaxes/jinja-yaml.json"
-			}
+			},
+                    "sniipets": [
+                        {
+                            "language": "jinja",
+                            "scopename": "source.jinja",
+                            "path": "./jinja2_snippets.json"
+                        }
+                    ]
 		]
 	}
 }

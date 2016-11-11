@@ -1,0 +1,50 @@
+{
+	"block": {
+		"prefix": "block",
+		"body": "{% block ${1:name} %}\n\t$2\n{% endblock %}",
+		"description": "Block",
+		"scope": "source.jinja2, text.html.jinja2"
+	},
+	"{%": {
+		"prefix": "{%",
+		"body": "{% $0 %}",
+		"description": "Complete Block",
+		"scope": "source.jinja2, text.html.jinja2"
+	},
+	"{{": {
+		"prefix": "{{",
+		"body": "{{ $0 }}",
+		"description": "Complete Variable",
+		"scope": "source.jinja2, text.html.jinja2"
+	},
+	"extends": {
+		"prefix": "extends",
+		"body": "{% extends ${1:\"${2:template}\"} %}",
+		"description": "Extends",
+		"scope": "source.jinja2, text.html.jinja2"
+	},
+	"filter": {
+		"prefix": "filter",
+		"body": "{% filter ${1:filter} %}\n\t$2\n{% endfilter %}",
+		"description": "Filter",
+		"scope": "source.jinja2, text.html.jinja2"
+	},
+	"for": {
+		"prefix": "for",
+		"body": "{% for ${1:item} in ${2:sequence} %}\n\t$3\n{% endfor %}",
+		"description": "For",
+		"scope": "source.jinja2, text.html.jinja2"
+	},
+	"if": {
+		"prefix": "if",
+		"body": "{% if ${1:expr} %}\n\t$2\n{% endif %}",
+		"description": "If",
+		"scope": "source.jinja2, text.html.jinja2"
+	},
+	"macro": {
+		"prefix": "macro",
+		"body": "{% macro ${1:name}(${2:args}) %}\n\t$3\n{% endmacro %}",
+		"description": "Macro",
+		"scope": "source.jinja2, text.html.jinja2"
+	}
+}
