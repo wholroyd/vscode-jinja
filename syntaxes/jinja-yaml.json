@@ -4,7 +4,8 @@
     "comment": "Jinja Template Engine in YAML",
     "fileTypes": [
         "j2",
-        "html"
+        "yml",
+        "yaml"
     ],
     "firstLineMatch": "^{% extends [\"'][^\"']+[\"'] %}",
     "patterns": [
