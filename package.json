@@ -33,24 +33,6 @@
 				],
                 "extensions": [".j2"],
 				"configuration": "./jinja.configuration.json"
-			},
-			{
-				"id": "html",
-				"aliases": [
-					"Jinja",
-					"HTML"
-				],
-                "extensions": [".j2", ".jinja2", ".html", ".htm"],
-				"configuration": "./jinja-html.configuration.json"
-			},
-			{
-				"id": "yaml",
-				"aliases": [
-					"Jinja",
-					"YAML"
-				],
-                "extensions": [".j2", ".eyaml", ".eyml", ".yaml", ".yml", ".sls"],
-				"configuration": "./jinja-yaml.configuration.json"
 			}
 		],
 		"grammars": [
