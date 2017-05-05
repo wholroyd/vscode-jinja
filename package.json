@@ -31,7 +31,7 @@
 				"aliases": [
 					"Jinja"
 				],
-                "extensions": [".j2"],
+                "extensions": [".j2", ".tera"],
 				"configuration": "./jinja.configuration.json"
 			},
 			{
@@ -40,7 +40,7 @@
 					"Jinja",
 					"HTML"
 				],
-                "extensions": [".j2", ".jinja2", ".html", ".htm"],
+                "extensions": [".j2", ".jinja2", ".tera", ".html", ".htm"],
 				"configuration": "./jinja-html.configuration.json"
 			},
 			{

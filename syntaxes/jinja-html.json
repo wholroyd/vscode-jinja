@@ -4,6 +4,7 @@
     "comment": "Jinja Template Engine in HTML",
     "fileTypes": [
         "j2",
+        "tera",
         "html"
     ],
     "firstLineMatch": "^{% extends [\"'][^\"']+[\"'] %}",
