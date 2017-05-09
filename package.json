@@ -1,6 +1,6 @@
 {
 	"name": "jinja",
-	"version": "0.0.7",
+	"version": "0.0.8",
 	"publisher": "wholroyd",
 	"author": {
 		"name": "William Holroyd"
@@ -22,7 +22,7 @@
 		"Linters"
 	],
 	"engines": {
-		"vscode": "0.10.x"
+		"vscode": "^1.0.0"
 	},
 	"contributes": {
 		"languages": [

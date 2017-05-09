@@ -8,9 +8,13 @@ This extension adds language colorization support for the Jinja template languag
 
 ## Using
 
-First, you will need to install Visual Studio Code `0.10`. In the command palette (`cmd-shift-p`) select `Install Extension` and choose `Jinja`.
+First, you will need to install Visual Studio Code `1.0.0` or higher. In the command palette (`cmd-shift-p`) select `Install Extension` and choose `Jinja`.
 
-The downside of the Jinja language is that there is no defined file extension and as such, there is no way to detect it automatically in all cases. This extension will look for it in two file extensions - .html and .j2. The .j2 file extension is heavily used with Ansible which uses the Jinja2 engine underneath.
+The downside of the Jinja language is that there is no defined file extension and as such, there is no way to detect it automatically in all cases. If you'd like to associate a file extension with this language, use the `file.association` setting as described [here](https://code.visualstudio.com/docs/languages/overview#_adding-a-file-extension-to-a-language).
+
+### ...as of v0.0.8
+
+A change was made to Visual Studio Code a while back which changed how languages are injected and used together. Such as using Jinja with HTML, YAML, JSON, or any other language you want to templatize. As a result, the extension will only highlight for the actual Jinja language or the other language, but not both. It's an unfortunate short term solution to give YAML and HTML options back to users until the extension can be revamped to support Jinja with any other language. 
 
 ## Contributing
 
