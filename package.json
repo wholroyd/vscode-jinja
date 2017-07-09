@@ -31,11 +31,16 @@
 				"aliases": [
 					"Jinja"
 				],
-                "extensions": [".j2"],
+                "extensions": [".j2", ".jinja2"],
 				"configuration": "./jinja.configuration.json"
 			}
 		],
 		"grammars": [
+			{
+				"language": "jinja",
+				"scopeName": "source.jinja2",
+				"path": "./syntaxes/jinja.json"
+			},
 			{
 				"language": "jinja",
 				"scopeName": "source.jinja",
