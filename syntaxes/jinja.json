@@ -1,8 +1,12 @@
 {
 	"name": "jinja",
 	"scopeName": "source.jinja",
-	"comment": "Jinja Template Engine",
-	"fileTypes": ["j2"],
+	"comment": "Jinja",
+	"fileTypes": [
+		"j2",
+		"jinja",
+		"jinja2"
+	],
 	"foldingStartMarker": "({%\\s*(block|filter|for|if|macro|raw))",
 	"foldingStopMarker": "({%\\s*(endblock|endfilter|endfor|endif|endmacro|endraw)\\s*%})",
 	"patterns": [

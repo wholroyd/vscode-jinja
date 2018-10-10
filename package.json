@@ -1,6 +1,6 @@
 {
 	"name": "jinja",
-	"version": "0.0.8",
+	"version": "0.0.10",
 	"publisher": "wholroyd",
 	"author": {
 		"name": "William Holroyd"
@@ -17,39 +17,85 @@
 		"url": "https://github.com/wholroyd/vscode-jinja/issues"
 	},
 	"categories": [
-		"Languages",
+		"Programming Languages",
 		"Snippets",
 		"Linters"
 	],
+	"keywords": [
+		"jinja",
+		"jinja2",
+		"html",
+		"yaml"
+	],
 	"engines": {
-		"vscode": "^1.0.0"
+		"vscode": "^1.23.0"
 	},
 	"contributes": {
+		"snippets": [
+			{
+				"language": "jinja",
+				"path": "./snippets/jinja.json"
+			}
+		],
 		"languages": [
+			{
+				"id": "jinja-html",
+				"aliases": [
+					"Jinja HTML",
+					"jinja-html"
+				],
+				"extensions": [
+					".html.j2",
+					".html.jinja",
+					".html.jinja2"
+				],
+				"configuration": "./language-configuration.json"
+			},
+			{
+				"id": "jinja-yaml",
+				"aliases": [
+					"Jinja YAML",
+					"jinja-yaml"
+				],
+				"extensions": [
+					".yml.j2",
+					".yml.jinja",
+					".yml.jinja2",
+					".yaml.j2",
+					".yaml.jinja",
+					".yaml.jinja2",
+					".sls"
+				],
+				"configuration": "./language-configuration.json"
+			},
 			{
 				"id": "jinja",
 				"aliases": [
 					"Jinja"
 				],
-                "extensions": [".j2"],
+				"extensions": [
+					".j2",
+					".jinja",
+					".jinja2"
+				],
 				"configuration": "./jinja.configuration.json"
 			}
 		],
 		"grammars": [
 			{
-				"language": "jinja",
-				"scopeName": "source.jinja",
-				"path": "./syntaxes/jinja.json"
-			},
-			{
-				"language": "html",
+				"language": "jinja-html",
 				"scopeName": "text.html.jinja",
 				"path": "./syntaxes/jinja-html.json"
 			},
 			{
-				"language": "yaml",
+				"language": "jinja-yaml",
 				"scopeName": "text.yaml.jinja",
 				"path": "./syntaxes/jinja-yaml.json"
+			},
+			{
+				"language": "jinja",
+				"scopeName": "source.jinja",
+				"path": "./syntaxes/jinja.json"
 			}
 		]
 	}

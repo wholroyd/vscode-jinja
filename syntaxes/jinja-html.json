@@ -1,10 +1,11 @@
 {
     "name": "jinja-html",
     "scopeName": "text.html.jinja",
-    "comment": "Jinja Template Engine in HTML",
+    "comment": "Jinja with HTML",
     "fileTypes": [
-        "j2",
-        "html"
+        "html.j2",
+        "html.jinja",
+        "html.jinja2"
     ],
     "firstLineMatch": "^{% extends [\"'][^\"']+[\"'] %}",
     "foldingStartMarker": "(<(?i:(head|table|tr|div|style|script|ul|ol|form|dl))\\b.*?>|{%\\s*(block|filter|for|if|macro|raw))",
