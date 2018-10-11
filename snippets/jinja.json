@@ -1,4 +1,25 @@
 {
+    "i18n": {
+		"prefix": "_",
+		"body": [
+			"{{ _('${TM_SELECTED_TEXT:${1:text}}') }}"
+		],
+		"description": "i18n"
+	},
+	"gettext": {
+		"prefix": "gt",
+		"body": [
+			"{{ gettext('${TM_SELECTED_TEXT:${1:text}}') }}"
+		],
+		"description": "Gettext"
+	},
+	"ngettext": {
+		"prefix": "ngt",
+		"body": [
+			"{{ ngettext('${TM_SELECTED_TEXT:${1:text}}') }}"
+		],
+		"description": "Ngettext"
+	},
     "block": {
         "prefix": "block",
         "body": "{% block ${1:name} %}\n\t$2\n{% endblock %}",

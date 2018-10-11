@@ -37,6 +37,7 @@ If you have a previous release of the extension installed and you perform these 
 
 ## Contributors
 
+- [Mikhail Kashkin](https://github.com/xen)
 - [TuxOtaku (Ryan Draga)](https://github.com/TuxOtaku)
 - [Silvenga (Mark Lopez)](https://github.com/Silvenga)
 - [Tim Wilde](https://github.com/TimWilde)
