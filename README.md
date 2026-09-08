@@ -38,7 +38,7 @@ Pull requests are welcome for highlighting, snippets, and language configuration
 
 If you're new to VS Code extensions, start at https://code.visualstudio.com/api.
 
-Run `npm test` for grammar fixtures and a check that we still don't attach grammars to the built-in HTML or YAML languages.
+Run `npm test` for grammar fixtures and a check that we still don't attach grammars to the built-in HTML or YAML languages. Pull requests run the same command in GitHub Actions.
 
 To work on this extension:
 
