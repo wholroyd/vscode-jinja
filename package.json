@@ -29,6 +29,11 @@
 	"engines": {
 		"vscode": "^1.75.0"
 	},
+	"scripts": {
+		"test": "npm run test:manifest && npm run test:grammar",
+		"test:manifest": "node --test tests/manifest.mjs",
+		"test:grammar": "vscode-tmgrammar-test -g tests/stubs/text.html.basic.json -g tests/stubs/source.yaml.json tests/grammar/**/*.jinja"
+	},
 	"contributes": {
 		"configurationDefaults": {
 			"emmet.includeLanguages": {
@@ -114,5 +119,8 @@
 				"path": "./syntaxes/jinja.json"
 			}
 		]
+	},
+	"devDependencies": {
+		"vscode-tmgrammar-test": "^0.1.3"
 	}
 }

@@ -1,0 +1,7 @@
+# SYNTAX TEST "text.yaml.jinja" "jinja expressions in yaml"
+hostname: {{ fqdn }}
+#         ^^ entity.other.jinja.delimiter.variable
+#            ^^^^ variable.other.jinja
+{% if ssl %}
+#  ^^ keyword.control.jinja
+{% endif %}

@@ -38,6 +38,8 @@ Pull requests are welcome for highlighting, snippets, and language configuration
 
 If you're new to VS Code extensions, start at https://code.visualstudio.com/api.
 
+Run `npm test` for grammar fixtures and a check that we still don't attach grammars to the built-in HTML or YAML languages.
+
 To work on this extension:
 
 1. Open the Debug viewlet, select `Launch Extension`, and run (`F5`). That starts a second Code window with this folder loaded as the extension.

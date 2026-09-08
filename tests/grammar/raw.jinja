@@ -1,0 +1,12 @@
+{# SYNTAX TEST "source.jinja" "raw is not a comment"
+{% raw %}
+{# ^^^ keyword.control.jinja
+<div>{{ not_jinja }}</div>
+{#<--------------------------- meta.scope.jinja.raw
+{#   ^^ - meta.scope.jinja.variable
+{#<--------------------------- - comment.block.jinja
+{% endraw %}
+{# ^^^^^^ keyword.control.jinja
+{%- raw -%} leftover {%- endraw -%}
+{#  ^^^ keyword.control.jinja
+{#<----------------------------------- - comment.block.jinja.raw

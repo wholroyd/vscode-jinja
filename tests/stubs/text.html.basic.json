@@ -1,0 +1,6 @@
+{
+	"name": "html-stub",
+	"scopeName": "text.html.basic",
+	"comment": "Minimal host grammar so jinja-html tests can include text.html.basic",
+	"patterns": []
+}

@@ -1,0 +1,14 @@
+{# SYNTAX TEST "source.jinja" "numbers, comparisons, variables"
+{{ 42 >= 1 }}
+{# <-- entity.other.jinja.delimiter.variable
+{# ^^ constant.numeric.jinja
+{#    ^^ keyword.operator.comparison.jinja
+{#       ^ constant.numeric.jinja
+{{ 0xFF }}
+{# ^^^^ constant.numeric.jinja
+{{ 1.5e-2 }}
+{# ^^^^^^ constant.numeric.jinja
+{{ user.name }}
+{# ^^^^ variable.other.jinja
+{#     ^ punctuation.other.jinja
+{#      ^^^^ variable.other.jinja.attribute

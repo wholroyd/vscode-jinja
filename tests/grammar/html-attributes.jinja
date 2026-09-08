@@ -1,0 +1,9 @@
+{# SYNTAX TEST "text.html.jinja" "jinja in html attributes"
+<form action="{{ url_for('auth.login') }}" method="post"></form>
+{#            ^^ entity.other.jinja.delimiter.variable
+{#               ^^^^^^^ variable.other.jinja
+{% if user %}
+{# ^^ keyword.control.jinja
+<p>{{ user }}</p>
+{#    ^^^^ variable.other.jinja
+{% endif %}
