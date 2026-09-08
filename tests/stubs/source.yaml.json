@@ -1,0 +1,6 @@
+{
+	"name": "yaml-stub",
+	"scopeName": "source.yaml",
+	"comment": "Minimal host grammar so jinja-yaml tests can include source.yaml",
+	"patterns": []
+}

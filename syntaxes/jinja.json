@@ -1,13 +1,17 @@
 {
 	"name": "jinja",
 	"scopeName": "source.jinja",
-	"comment": "Jinja Template Engine",
-	"fileTypes": ["j2"],
-	"foldingStartMarker": "({%\\s*(block|filter|for|if|macro|raw))",
-	"foldingStopMarker": "({%\\s*(endblock|endfilter|endfor|endif|endmacro|endraw)\\s*%})",
+	"comment": "Jinja",
+	"fileTypes": [
+		"j2",
+		"jinja",
+		"jinja2"
+	],
+	"foldingStartMarker": "({%-?\\s*(block|filter|for|if|macro|raw))",
+	"foldingStopMarker": "({%-?\\s*(endblock|endfilter|endfor|endif|endmacro|endraw)\\s*-?%})",
 	"patterns": [
 		{
-			"begin": "({%)\\s*(raw)\\s*(%})",
+			"begin": "({%-?)\\s*(raw)\\s*(-?%})",
 			"captures": {
 				"1": {
 					"name": "entity.other.jinja.delimiter.tag"
@@ -19,8 +23,8 @@
 					"name": "entity.other.jinja.delimiter.tag"
 				}
 			},
-			"end": "({%)\\s*(endraw)\\s*(%})",
-			"name": "comment.block.jinja.raw"
+			"end": "({%-?)\\s*(endraw)\\s*(-?%})",
+			"name": "meta.scope.jinja.raw"
 		},
 		{
 			"begin": "{#-?",
@@ -138,6 +142,10 @@
 					"name": "variable.language.jinja"
 				},
 				{
+					"match": "\\b(0[xX][0-9a-fA-F]+|\\d+(\\.\\d+)?([eE][+-]?\\d+)?)\\b",
+					"name": "constant.numeric.jinja"
+				},
+				{
 					"match": "[a-zA-Z_][a-zA-Z0-9_]*",
 					"name": "variable.other.jinja"
 				},
@@ -214,7 +222,7 @@
 					"name": "punctuation.other.jinja"
 				},
 				{
-					"match": "(==|<=|=>|<|>|!=)",
+					"match": "(==|!=|<=|>=|<|>)",
 					"name": "keyword.operator.comparison.jinja"
 				},
 				{

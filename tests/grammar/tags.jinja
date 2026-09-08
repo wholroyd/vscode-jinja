@@ -1,0 +1,9 @@
+{# SYNTAX TEST "source.jinja" "tags and whitespace stripping"
+{% for item in seq %}
+{# <-- entity.other.jinja.delimiter.tag
+{# ^^^ keyword.control.jinja
+{%- endfor -%}
+{# <--- entity.other.jinja.delimiter.tag
+{#  ^^^^^^ keyword.control.jinja
+{% if ready %}{{ value }}{% endif %}
+{# ^^ keyword.control.jinja
