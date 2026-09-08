@@ -18,8 +18,7 @@
 	},
 	"categories": [
 		"Programming Languages",
-		"Snippets",
-		"Linters"
+		"Snippets"
 	],
 	"keywords": [
 		"jinja",
@@ -28,12 +27,25 @@
 		"yaml"
 	],
 	"engines": {
-		"vscode": "^1.23.0"
+		"vscode": "^1.75.0"
 	},
 	"contributes": {
+		"configurationDefaults": {
+			"emmet.includeLanguages": {
+				"jinja-html": "html"
+			}
+		},
 		"snippets": [
 			{
 				"language": "jinja",
+				"path": "./snippets/jinja.json"
+			},
+			{
+				"language": "jinja-html",
+				"path": "./snippets/jinja.json"
+			},
+			{
+				"language": "jinja-yaml",
 				"path": "./snippets/jinja.json"
 			}
 		],
@@ -49,7 +61,7 @@
 					".html.jinja",
 					".html.jinja2"
 				],
-				"configuration": "./language-configuration.json"
+				"configuration": "./jinja-html.configuration.json"
 			},
 			{
 				"id": "jinja-yaml",
@@ -66,7 +78,7 @@
 					".yaml.jinja2",
 					".sls"
 				],
-				"configuration": "./language-configuration.json"
+				"configuration": "./jinja-yaml.configuration.json"
 			},
 			{
 				"id": "jinja",
@@ -85,7 +97,11 @@
 			{
 				"language": "jinja-html",
 				"scopeName": "text.html.jinja",
-				"path": "./syntaxes/jinja-html.json"
+				"path": "./syntaxes/jinja-html.json",
+				"embeddedLanguages": {
+					"source.js": "javascript",
+					"source.css": "css"
+				}
 			},
 			{
 				"language": "jinja-yaml",

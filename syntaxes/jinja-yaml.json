@@ -11,8 +11,30 @@
         "yaml.jinja",
         "yaml.jinja2"
     ],
-    "firstLineMatch": "^{% extends [\"'][^\"']+[\"'] %}",
+    "foldingStartMarker": "{%-?\\s*(block|filter|for|if|macro|raw)",
+    "foldingStopMarker": "{%-?\\s*(endblock|endfilter|endfor|endif|endmacro|endraw)\\s*-?%}",
     "patterns": [
+        {
+            "begin": "({%-?)\\s*(raw)\\s*(-?%})",
+            "captures": {
+                "1": {
+                    "name": "entity.other.jinja.delimiter.tag"
+                },
+                "2": {
+                    "name": "keyword.control.jinja"
+                },
+                "3": {
+                    "name": "entity.other.jinja.delimiter.tag"
+                }
+            },
+            "end": "({%-?)\\s*(endraw)\\s*(-?%})",
+            "name": "meta.embedded.block.raw.jinja",
+            "patterns": [
+                {
+                    "include": "source.yaml"
+                }
+            ]
+        },
         {
             "include": "source.jinja"
         },

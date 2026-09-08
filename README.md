@@ -1,39 +1,50 @@
 # Jinja for Visual Studio Code
 
-This extension adds language colorization support for the Jinja template language to VS Code.
+This extension adds syntax highlighting and snippets for the Jinja template language.
 
 ![IDE](https://raw.githubusercontent.com/wholroyd/vscode-jinja/master/example.png)
 
 ## Using
 
-First, you will need to install Visual Studio Code `1.0.0` or higher. In the command palette (`cmd-shift-p`) select `Install Extension` and choose `Jinja`.
+Install Visual Studio Code 1.75 or higher. In the command palette (`cmd-shift-p` / `ctrl-shift-p`) choose **Install Extensions** and search for `Jinja`.
 
-The downside of the Jinja language itself is that there is no defined file extension and as such, there is no way to detect it automatically in all cases. If you'd like to associate a file extension with this language, use the `file.association` setting as described [here](https://code.visualstudio.com/docs/languages/overview#_adding-a-file-extension-to-a-language).
+Jinja has no single standard file extension, so the extension maps a few common ones and leaves the rest to you.
+
+| Language mode | Extensions |
+| --- | --- |
+| Jinja | `.j2`, `.jinja`, `.jinja2` |
+| Jinja HTML | `.html.j2`, `.html.jinja`, `.html.jinja2` |
+| Jinja YAML | `.yml.j2`, `.yaml.j2`, `.yml.jinja`, `.yaml.jinja`, `.sls` |
+
+Jinja HTML is a separate language from HTML. Emmet abbreviations work there because the extension maps `jinja-html` to HTML for Emmet. Script and style blocks use JavaScript and CSS commenting instead of HTML comments.
+
+To treat other names as Jinja, use [`files.associations`](https://code.visualstudio.com/docs/languages/overview#_adding-a-file-extension-to-a-language):
 
 ```json
 "files.associations": {
     "*.jinja": "jinja",
-    "*.sls": "jinja"
+    "*.html": "jinja-html",
+    "*.sls": "jinja-yaml"
 }
 ```
 
+Do not associate `*.html` globally if you also edit plain HTML in that workspace. Prefer a folder setting, or double extensions like `.html.j2`.
 
-## Possible Issues
-
-A change was made to Visual Studio Code a while back which changed how languages are injected and used together. Such as using Jinja with HTML, YAML, JSON, or any other language you want to templatize. As a result, the extension will only highlight for the actual Jinja language or the other language, but not both. It's an unfortunate short term solution to give YAML and HTML options back to users until the extension can be revamped to support Jinja with any other language.
+This extension does not replace VS Code's built-in HTML or YAML languages. That used to happen, and it broke commenting, Emmet, and other HTML features in every HTML file.
 
 ## Contributing
 
-If you are interested in making this extension better, I will gladly take pull requests that expand it to add intellisense, hovers and validators. If you're not familiar with working on Visual Studio Code extensions, check out the VS Code extenders documentation at
-https://code.visualstudio.com/docs.
+Pull requests are welcome for highlighting, snippets, and language configuration. IntelliSense, go to definition, and formatters need a language server. This extension does not provide one.
 
-To get started on the extension...
+If you're new to VS Code extensions, start at https://code.visualstudio.com/api.
 
-1. Go to the Debug viewlet and select `Launch Extension` then hit run (`F5`). This will launch a second instance of Code with the extension from the first window loaded.
+To work on this extension:
 
-2. As you make changes, you can also reload (`Ctrl+R` or `Cmd+R` on Mac) the second Code window to load any changes.
+1. Open the Debug viewlet, select `Launch Extension`, and run (`F5`). That starts a second Code window with this folder loaded as the extension.
 
-If you have a previous release of the extension installed and you perform these steps, Code will temporarily override the locally installed version instead for the one you're working on for the second window. The first (main) window will remain to have the locally installed, prior version installed and enabled until an update is available.
+2. Reload that second window (`Ctrl+R` or `Cmd+R` on Mac) after you change files.
+
+If you already have the Marketplace build installed, the debug window uses this folder instead. Your stable window keeps the installed version.
 
 ## Contributors
 
@@ -43,6 +54,7 @@ If you have a previous release of the extension installed and you perform these 
 - [Tim Wilde](https://github.com/TimWilde)
 - [Juan Castano](https://github.com/juan-castano)
 - [MortalCatalyst (Sayth)](https://github.com/MortalCatalyst)
+- [gmotos](https://github.com/gmotos)
 
 ## License
 [MIT](LICENSE)
