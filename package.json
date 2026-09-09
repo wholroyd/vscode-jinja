@@ -32,7 +32,7 @@
 	"scripts": {
 		"test": "npm run test:manifest && npm run test:grammar",
 		"test:manifest": "node --test tests/manifest.mjs",
-		"test:grammar": "vscode-tmgrammar-test -g tests/stubs/text.html.basic.json -g tests/stubs/source.yaml.json tests/grammar/**/*.jinja"
+		"test:grammar": "vscode-tmgrammar-test -g tests/stubs/text.html.basic.json -g tests/stubs/source.css.json -g tests/stubs/source.yaml.json -g syntaxes/jinja-injection.json tests/grammar/**/*.jinja"
 	},
 	"contributes": {
 		"configurationDefaults": {
@@ -117,6 +117,13 @@
 				"language": "jinja",
 				"scopeName": "source.jinja",
 				"path": "./syntaxes/jinja.json"
+			},
+			{
+				"scopeName": "jinja.injection",
+				"path": "./syntaxes/jinja-injection.json",
+				"injectTo": [
+					"text.html.jinja"
+				]
 			}
 		]
 	},
