@@ -33,6 +33,16 @@ test("does not replace built-in HTML or YAML", () => {
 	}
 });
 
+test("injects Jinja into embedded style and script blocks", () => {
+	const injection = contributes.grammars.find((item) => item.injectTo);
+	assert.ok(injection, "missing injection grammar");
+	assert.deepEqual(injection.injectTo, ["text.html.jinja"]);
+	assert.equal(injection.language, undefined, "an injection must not claim a language");
+	const selector = readConfig(injection.path).injectionSelector;
+	assert.match(selector, /source\.css/);
+	assert.match(selector, /source\.js/);
+});
+
 test("registers jinja, jinja-html, and jinja-yaml", () => {
 	assert.deepEqual(
 		contributes.languages.map((item) => item.id).sort(),
@@ -84,6 +94,7 @@ test("snippets and grammars point at files that exist", () => {
 	}
 	for (const item of contributes.grammars) {
 		assert.ok(existsSync(join(root, item.path)), item.path);
+		if (item.injectTo) continue;
 		assert.ok(existsSync(join(root, lang(item.language).configuration)));
 	}
 	assert.deepEqual(

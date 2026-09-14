@@ -1,0 +1,18 @@
+{
+	"name": "css-stub",
+	"scopeName": "source.css",
+	"comment": "Minimal host grammar so the <style> tests have something that claims a lone { the way real CSS does.",
+	"patterns": [
+		{
+			"begin": "\\{",
+			"beginCaptures": [
+				{ "name": "punctuation.section.property-list.begin.bracket.curly.css" }
+			],
+			"end": "\\}",
+			"endCaptures": [
+				{ "name": "punctuation.section.property-list.end.bracket.curly.css" }
+			],
+			"name": "meta.property-list.css"
+		}
+	]
+}

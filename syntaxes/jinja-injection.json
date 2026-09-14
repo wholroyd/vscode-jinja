@@ -1,0 +1,11 @@
+{
+	"name": "jinja-injection",
+	"scopeName": "jinja.injection",
+	"comment": "Injects Jinja delimiters into the CSS and JavaScript that text.html.basic embeds inside <style> and <script>, so a print statement there is not parsed as CSS or JavaScript.",
+	"injectionSelector": "L:source.css -comment, L:source.js -comment",
+	"patterns": [
+		{
+			"include": "source.jinja"
+		}
+	]
+}

@@ -1,6 +1,26 @@
 {
 	"name": "html-stub",
 	"scopeName": "text.html.basic",
-	"comment": "Minimal host grammar so jinja-html tests can include text.html.basic",
-	"patterns": []
+	"comment": "Minimal host grammar so jinja-html tests can include text.html.basic. It embeds source.css inside <style> the way the built-in HTML grammar does, so the injection can be tested.",
+	"patterns": [
+		{
+			"begin": "(<)(style)(>)",
+			"beginCaptures": {
+				"1": { "name": "punctuation.definition.tag.begin.html" },
+				"2": { "name": "entity.name.tag.html" },
+				"3": { "name": "punctuation.definition.tag.end.html" }
+			},
+			"end": "(</)(style)(>)",
+			"endCaptures": {
+				"1": { "name": "punctuation.definition.tag.begin.html" },
+				"2": { "name": "entity.name.tag.html" },
+				"3": { "name": "punctuation.definition.tag.end.html" }
+			},
+			"name": "meta.embedded.block.html",
+			"contentName": "source.css",
+			"patterns": [
+				{ "include": "source.css" }
+			]
+		}
+	]
 }

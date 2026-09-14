@@ -1,0 +1,8 @@
+{# SYNTAX TEST "text.html.jinja" "jinja inside an embedded <style> block"
+<style>{{ style }}</style>
+{#     ^^ entity.other.jinja.delimiter.variable
+{#        ^^^^^ variable.other.jinja
+{#              ^^ entity.other.jinja.delimiter.variable
+<style>{% if dark %}.a{color:red}{% endif %}</style>
+{#     ^^ entity.other.jinja.delimiter.tag
+{#        ^^ keyword.control.jinja
